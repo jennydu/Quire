@@ -1,6 +1,6 @@
 # Quire
 
-Quire is an social polling application where users can post polls to get help on decisions and questions, and help answer other users' polls. Currently supported for Android.
+Quire runs on crowdsourced decision-making for any tough choice you come across in your day-to-day life. It's a social polling application where users can post polls to get help on decisions and questions, and help answer other users' polls. Available on the Google Play Store. 
 
 ## Demo
 
