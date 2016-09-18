@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:id="@+id/rlTotal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/llHeader"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginLeft="8dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/ivProfileImage"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="2dp"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time posted"
+                android:id="@+id/tvTime"
+                android:layout_alignTop="@+id/tvUsername"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                style="@style/textTimeStyle"
+                android:textColor="@color/aluminum"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="username"
+                android:id="@+id/tvUsername"
+                style="@style/textUsernameStyle"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_toRightOf="@id/ivProfileImage"
+                android:textColor="@color/textColorPrimary"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question"
+            android:id="@+id/tvQuestion"
+            android:lineSpacingExtra="1dp"
+            style="@style/textQuestionStyle"
+            android:paddingBottom="14dp"
+            android:textSize="25dp"
+            android:paddingTop="5dp"
+            android:layout_below="@+id/llHeader"
+            android:layout_marginLeft="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description here"
+            android:id="@+id/tvDescription"
+            android:layout_below="@id/tvQuestion"
+            android:layout_alignLeft="@id/tvQuestion"
+            style="@style/textSmallerStyle"
+            android:textSize="17sp"
+            android:paddingBottom="12dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlQuire"
+            android:background="@color/radiogroupBackground"
+            android:layout_below="@+id/tvDescription"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llPoll"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+            </LinearLayout>
+
+
+            <com.facebook.quire.views.VotersIcon
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cvVoters"
+                android:layout_below="@id/llPoll"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"/>
+
+
+            <com.facebook.quire.views.CommentsIcon
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cvComments"
+                android:layout_below="@id/llPoll"
+                android:layout_marginLeft="70dp">
+
+            </com.facebook.quire.views.CommentsIcon>
+
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnDone"
+                android:text="@string/mark_as_done"
+                android:onClick="onDoneClick"
+                style="@style/smallButtonStyle"
+                android:background="@drawable/button"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>

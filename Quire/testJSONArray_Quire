@@ -1,0 +1,65 @@
+[{
+		"quire_id": 123456,
+		"status": true,
+		"deadline": "Thu Jul 7 13:00:00 2016",
+		"created_at": "Thu Jul 7 10:00:00 2016",
+		"question_text": "Where should I eat for lunch today?",
+		"description_text": "I want to eat healthy.",
+		"upvote_count": 13,
+		"comment_count": 2,
+		"comments": [{
+			"text": "This is the first comment",
+			"id": 222222,
+			"full_name": "Claudia Wu"
+		}, {
+			"text": "This is the second comment",
+			"id": 333333,
+			"full_name": "Jennifer Du"
+		}],
+		"likers": [{
+			"user_id": 123241
+		}, {
+			"user_id": 111111
+		}],
+		"poll_choices": [{
+			"text": "Full Circle",
+			"votes": 12
+		}, {
+			"text": "Mama Penny's",
+			"votes": 7
+		}],
+		"location": null,
+		"result": null,
+		"user": {
+			"user_id": 12345,
+			"profile_image": "https://static2.businessinsider.com/image/5654150584307663008b4ed8/this-tech-recruiter-owns-the-most-hipster-cat-on-instagram.jpg",
+			"screen_name": "cosmtig",
+			"full_name": "Angela Mao",
+			"email": "amao@fb.com",
+			"password": "password",
+			"followers": [{
+				"user_id": 23456
+			}, {
+				"user_id": 34567
+			}],
+			"followers_count": 2,
+			"following": [{
+				"user_id": 23456
+			}, {
+				"user_id": 34567
+			}, {
+				"user_id": 11111
+			}, {
+				"user_id": 44444
+			}, {
+				"user_id": 55555
+			}, {
+				"user_id": 77777
+			}],
+			"following_count": 6,
+			"description": "Yay I love asking questions! Plz help make decisions"
+		}
+
+	}
+
+]

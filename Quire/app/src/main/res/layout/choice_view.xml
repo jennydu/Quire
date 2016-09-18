@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/llChoice"
+    android:background="@color/radiogroupBackground">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/rlBar"
+        android:orientation="vertical"
+        >
+        
+        <android.support.v7.widget.AppCompatRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/textColorPrimary"
+            android:paddingLeft="20dp"
+            android:id="@+id/rbOption"
+            android:text="Option here"
+            android:textAppearance="@style/textChoiceStyle"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlVotes"
+            android:gravity="center"
+            >
+
+            <ProgressBar
+                android:layout_width="220dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="52dp"
+                android:id="@+id/pbBar"
+                style="@style/ProgressBar"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvPercentage"
+                android:textAppearance="@style/textPercentageStyle"
+                android:textSize="14sp"
+                android:layout_toRightOf="@+id/pbBar"
+                android:layout_toEndOf="@+id/pbBar"
+                android:layout_marginLeft="25dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    
+</LinearLayout>

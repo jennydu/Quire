@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.FeedActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile"
+            android:layout_centerVertical="true"
+            style="@style/smallHeaderStyle"
+            android:textColor="@color/white"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/view">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:id="@+id/appbar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:id="@+id/collapsing_toolbar"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:expandedTitleMarginBottom="32dp"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rlProfileHeader"
+                    android:background="@color/colorPrimary"
+                    android:paddingBottom="20dp"
+                    app:layout_collapseMode="parallax"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        tools:src="@mipmap/ic_launcher_old"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:id="@+id/ivProfileImage"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        app:layout_behavior="package.AvatarImageBehavior"/>
+
+                    <ImageView
+                        android:onClick="onEditClick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/ivEdit"
+                        android:src="@drawable/ic_edit"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvLabelName"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_toRightOf="@+id/ivProfileImage"
+                        android:text="@string/name"
+                        style="@style/smallHeaderStyle"
+                        android:layout_marginLeft="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvName"
+                        tools:text="John Smith"
+                        style="@style/textSmallStyle"
+                        android:layout_below="@id/tvLabelName"
+                        android:textColor="@color/white"
+                        android:layout_alignStart="@+id/tvLabelName"
+                        android:layout_alignLeft="@+id/tvLabelName"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvLabelUsername"
+                        android:textColor="@color/white"
+                        android:text="@string/username"
+                        android:layout_below="@id/tvName"
+                        style="@style/smallHeaderStyle"
+                        android:layout_alignStart="@+id/tvLabelName"
+                        android:layout_alignLeft="@+id/tvLabelName" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvUsername"
+                        tools:text="jsmith"
+                        android:layout_below="@id/tvLabelUsername"
+                        style="@style/textSmallStyle"
+                        android:textColor="@color/white"
+                        android:layout_alignStart="@+id/tvLabelName"
+                        android:layout_alignLeft="@+id/tvLabelName"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvLabelEmail"
+                        android:textColor="@color/white"
+                        android:text="@string/email_hint"
+                        android:layout_below="@id/tvUsername"
+                        style="@style/smallHeaderStyle"
+                        android:textStyle="bold"
+                        android:layout_alignStart="@+id/tvLabelName"
+                        android:layout_alignLeft="@+id/tvLabelName"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvEmail"
+                        tools:text="jsmith@gmail.com"
+                        android:layout_below="@id/tvLabelEmail"
+                        style="@style/textSmallStyle"
+                        android:textColor="@color/white"
+                        android:layout_alignStart="@+id/tvLabelName"
+                        android:layout_alignLeft="@+id/tvLabelName"
+                        android:layout_marginBottom="10dp"/>
+                </RelativeLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <com.astuetz.PagerSlidingTabStrip
+                    android:id="@+id/tabs"
+                    app:pstsShouldExpand="true"
+                    app:pstsTextAllCaps="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    app:pstsIndicatorColor="#1abc9c"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:layout_below="@+id/tabs"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:clipToPadding="false" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:id="@+id/llTransition"
+        android:background="@color/colorPrimary"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/view">
+        <ImageView
+            android:onClick="onDoneClick"
+            android:src="@drawable/ic_back_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/ivImage"
+            tools:src="@mipmap/ic_launcher_old"
+            app:finalHeight="@dimen/image_final_width"
+            app:finalYPosition="2dp"
+            app:layout_behavior="com.facebook.quire.AvatarImageBehavior"
+            app:startHeight="2dp"
+            app:startToolbarPosition="2dp"
+            app:startXPosition="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_textview_title"
+            tools:text="John Smith"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            style="@style/smallHeaderStyle"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

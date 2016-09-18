@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlCommentHeader">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                tools:src="@mipmap/ic_launcher_old"
+                android:id="@+id/ivProfileImage"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvName"
+                tools:text="JohnSmith"
+                style="@style/textChoiceStyle"
+                android:layout_toRightOf="@id/ivProfileImage"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTime"
+                tools:text="5h ago"
+                style="@style/textTimeStyle"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvComment"
+            tools:text="My comment is here"
+            android:layout_below="@+id/rlCommentHeader"
+            android:layout_alignParentLeft="true"
+            style="@style/textSmallStyle"
+            android:layout_marginLeft="55dp"
+            android:layout_marginBottom="10dp"/>
+    </RelativeLayout>

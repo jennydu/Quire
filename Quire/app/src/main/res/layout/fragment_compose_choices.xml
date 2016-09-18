@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llQuestion"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvQuestion"
+
+            style="@style/textHeaderStyle"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textColor="@color/black" />
+
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_below="@+id/llQuestion"
+    android:id="@+id/flChoices"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/superlightgrey"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+        <LinearLayout
+            android:id="@+id/llChoices"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flEditChoice"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etChoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Add a choice here..."
+            android:inputType="textCapSentences"
+            android:textColorHint="@color/aluminum"
+            style="@style/textRegularStyle"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/ivAddChoice"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/add_choice"
+            android:layout_gravity="right|center_vertical" />
+    </FrameLayout>
+</RelativeLayout>

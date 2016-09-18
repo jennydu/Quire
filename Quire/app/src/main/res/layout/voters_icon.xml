@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivVoters"
+        android:src="@drawable/ic_vote_unfilled"/>
+
+    <TextView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/tvNumVoters"
+        android:text="15"
+        android:textAppearance="@style/textNumberIcon"
+        android:layout_alignBottom="@+id/ivVoters"
+        android:layout_alignRight="@+id/ivVoters"
+        android:layout_alignEnd="@+id/ivVoters"
+        android:background="@drawable/number_background"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingBottom="1dp"/>
+
+</RelativeLayout>

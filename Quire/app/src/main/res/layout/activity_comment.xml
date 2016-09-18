@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary">
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comments"
+            android:layout_centerVertical="true"
+            style="@style/smallHeaderStyle"
+            android:textColor="@color/white"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/flCommentsContainer"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/llCommentsInput"/>
+
+    <LinearLayout
+        android:id="@+id/llCommentsInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:paddingBottom="10dp"
+        android:weightSum="1"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/ivCommentImage"
+            android:padding="5dp"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:id="@+id/etComment"
+            android:hint="@string/write_a_comment"
+            android:layout_width="200dp"
+            android:inputType="textCapSentences"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ivCommentImage"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/btnComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/smallButtonStyle"
+            android:text="@string/post"
+            android:background="@drawable/button"
+            android:onClick="onCommentClick"
+            android:maxLines="1"
+            android:layout_toRightOf="@id/etComment"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "516863870746",
+    "firebase_url": "https://quire-9aecf.firebaseio.com",
+    "project_id": "quire-9aecf",
+    "storage_bucket": "quire-9aecf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516863870746:android:f9141d0dfe9928d8",
+        "android_client_info": {
+          "package_name": "com.facebook.quire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516863870746-tpnbr3anlifed4r3kucc9e5d7itv6mkv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZXGfvKg6ey0Ui-1CqByBUUAQjh_ID7mw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

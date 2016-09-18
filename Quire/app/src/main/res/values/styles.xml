@@ -1,0 +1,243 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/drawer_list_selector</item>
+        <!--<item name="android:textAppearance">@style/textRegularStyle</item>-->
+        <!--<item name="android:textAppearanceSmall">@style/textSmallStyle</item>-->
+        <item name="android:radioButtonStyle">@style/MyRadioButton</item>
+    </style>
+
+    <style name="MyRadioButton" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="fontPath">fonts/Dosis-Regular.ttf</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- android:textColorPrimary is the color of the title text in the Toolbar  -->
+        <item name="android:textColorPrimary">@android:color/holo_blue_light</item>
+        <!-- actionMenuTextColor is the color of the text of action (menu) items  -->
+        <item name="actionMenuTextColor">@android:color/holo_green_light</item>
+        <!-- Tints the input fields like checkboxes and text fields -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Applies to views in their normal state. -->
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <!-- Applies to views in their activated state (i.e checked or switches) -->
+        <item name="colorControlActivated">@color/controlActivated</item>
+        <!-- Applied to framework control highlights (i.e ripples or list selectors) -->
+        <item name="colorControlHighlight">@color/controlActivated</item>
+
+        <!-- Enable these below if you want clicking icons to trigger a ripple effect -->
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item>
+    </style>
+
+    <!-- This configures the styles for the title within the Toolbar  -->
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="fontPath">fonts/Dosis-Bold.ttf</item>
+    </style>
+
+    <style name="WelcomeTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowBackground">@color/colorPrimary</item>
+
+        <item name="colorControlNormal">@color/iron</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="android:textColorHint">@color/iron</item>
+
+        <item name="colorButtonNormal">@color/colorPrimaryDark</item>
+        <item name="android:colorButtonNormal" tools:targetApi="lollipop">@color/colorPrimaryDarker</item>
+    </style>
+
+    <style name="AppTheme.Dark.Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/white</item>
+        <item name="android:textColorPrimary">@color/iron</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+
+    <style name="ContentTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowBackground">@color/white</item>
+
+        <item name="colorControlNormal">@color/iron</item>
+        <item name="colorControlActivated">@color/black</item>
+        <item name="colorControlHighlight">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+
+        <item name="colorButtonNormal">@color/colorPrimaryDark</item>
+        <item name="android:colorButtonNormal" tools:targetApi="lollipop">@color/colorPrimaryDarker</item>
+    </style>
+
+    <style name="textRegularStyle">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="fontPath">fonts/Dosis-Regular.ttf</item>
+    </style>
+
+    <style name="textBigRegularStyle">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="fontPath">fonts/Dosis-Regular.ttf</item>
+    </style>
+
+    <style name="textQuestionStyle">
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="fontPath">fonts/Dosis-Bold.ttf</item>
+    </style>
+
+    <style name="textUsernameStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="fontPath">fonts/Dosis-Bold.ttf</item>
+    </style>
+
+    <style name="textChoiceStyle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="fontPath">fonts/Dosis-Bold.ttf</item>
+    </style>
+
+    <style name="textTimeStyle">
+        <item name="android:text">20sp</item>
+        <item name="android:textColor">@color/base</item>
+        <item name="fontPath">fonts/Dosis-Regular.ttf</item>
+    </style>
+
+    <style name="textPercentageStyle">
+        <item name="android:text">15sp</item>
+        <item name="android:textColor">@color/percentage</item>
+        <item name="fontPath">fonts/Dosis-Regular.ttf</item>
+    </style>
+
+    <style name="textSmallStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="fontPath">fonts/Dosis-Regular.ttf</item>
+    </style>
+
+    <style name="textNumberIcon">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="fontPath">fonts/Dosis-Bold.ttf</item>
+    </style>
+
+    <style name="textSmallBoldStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="fontPath">fonts/Dosis-Regular.ttf</item>
+    </style>
+
+    <style name="textSmallerStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="fontPath">fonts/Dosis-Regular.ttf</item>
+    </style>
+
+    <style name="textHeaderStyle">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="fontPath">fonts/Dosis-Bold.ttf</item>
+    </style>
+
+    <style name="textSmallestStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="fontPath">fonts/Dosis-Bold.ttf</item>
+    </style>
+
+    <style name="smallHeaderStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="fontPath">fonts/Dosis-Bold.ttf</item>
+    </style>
+
+    <style name="buttonStyle">
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/textColorAccent</item>
+        <item name="fontPath">fonts/Dosis-Bold.ttf</item>
+        <item name="android:paddingLeft">50dp</item>
+        <item name="android:paddingRight">50dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+    </style>
+
+
+
+    <style name="smallButtonStyle">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@color/colorPrimaryDarker</item>
+        <item name="android:textColor">@color/textColorAccent</item>
+        <item name="fontPath">fonts/Dosis-Bold.ttf</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="marginPage">
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <style name="TransparentTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:actionBarStyle">@style/ActionBarStyle.Transparent</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="ActionBarStyle.Transparent" parent="@android:style/Widget.ActionBar">
+        <item name="android:background">@null</item>
+        <item name="android:displayOptions">homeAsUp|showHome|showTitle</item>
+        <item name="android:titleTextStyle">@style/ActionBarStyle.Transparent.TitleTextStyle</item>
+    </style>
+
+    <style name="ActionBarStyle.Transparent.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ProgressBar">
+        <item name="android:progressDrawable">@drawable/progressbar</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminate">false</item>
+    </style>
+
+</resources>

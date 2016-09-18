@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/etQuestion"
+
+        android:hint="What do you want to ask?"
+        android:textColorHint="@color/iron"
+        android:inputType="textCapSentences"
+        style="@style/textHeaderStyle"
+
+        android:layout_gravity="top"
+        android:gravity="top"
+
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

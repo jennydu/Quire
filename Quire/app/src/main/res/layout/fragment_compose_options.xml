@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/llQuire"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            style="@style/textHeaderStyle"
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:visibility="gone"
+            style="@style/textSmallerStyle"
+            android:layout_alignLeft="@id/tvQuestion"
+            android:textSize="17sp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/llChoices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/superlightgrey"
+            android:orientation="vertical"
+                android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:baselineAligned="true"
+        android:layout_gravity="bottom"
+        android:gravity="bottom|center"
+        android:id="@+id/llOptionsActions"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBtnAddDescription"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|end"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:id="@+id/ivAddDescription"
+            android:src="@drawable/ic_add_description_composer"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvAddDescription"
+            android:text="Add description (optional)"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@+id/flEdit"
+            android:visibility="gone"
+            android:hint="Add a description"
+            android:inputType="textCapSentences"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:hint="Add a description"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:inputType="textCapSentences"
+                style="@style/textSmallerStyle"
+                android:layout_height="60dp" />
+
+            <ImageView
+                android:id="@+id/ivAdd"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/add_choice"
+                android:layout_gravity="right|center_vertical" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

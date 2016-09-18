@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary" >
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:layout_centerVertical="true"
+            style="@style/smallHeaderStyle"
+            android:textColor="@color/white"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/rlProfileHeader"
+        android:background="@color/white"
+        android:layout_below="@+id/toolbar"
+        android:paddingBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlImage">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                tools:src="@mipmap/ic_launcher_old"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:id="@+id/ivProfileImage"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_camera"
+                android:id="@+id/ivEditImage"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvLabelName"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_toRightOf="@+id/rlImage"
+            android:text="@string/name"
+            style="@style/textSmallBoldStyle"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etName"
+            tools:text="John Smith"
+            android:inputType="textCapSentences"
+            style="@style/textSmallStyle"
+            android:layout_below="@id/tvLabelName"
+            android:layout_alignStart="@+id/tvLabelName"
+            android:layout_alignLeft="@+id/tvLabelName"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvLabelUsername"
+            android:text="@string/username"
+            android:layout_below="@id/etName"
+            style="@style/textSmallBoldStyle"
+            android:textStyle="bold"
+            android:layout_alignStart="@+id/tvLabelName"
+            android:layout_alignLeft="@+id/tvLabelName" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etUsername"
+            tools:text="jsmith"
+            android:layout_below="@id/tvLabelUsername"
+            style="@style/textSmallStyle"
+            android:layout_alignStart="@+id/tvLabelName"
+            android:layout_alignLeft="@+id/tvLabelName"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvLabelEmail"
+            android:text="@string/email_hint"
+            android:layout_below="@id/etUsername"
+            style="@style/textSmallBoldStyle"
+            android:textStyle="bold"
+            android:layout_alignStart="@+id/tvLabelName"
+            android:layout_alignLeft="@+id/tvLabelName"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etEmail"
+            tools:text="jsmith@gmail.com"
+            android:layout_below="@id/tvLabelEmail"
+            style="@style/textSmallStyle"
+            android:layout_alignStart="@+id/tvLabelName"
+            android:layout_alignLeft="@+id/tvLabelName"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvLabelPassword"
+            android:text="@string/password_hint"
+            android:layout_below="@id/etEmail"
+            style="@style/textSmallBoldStyle"
+            android:textStyle="bold"
+            android:layout_alignStart="@+id/tvLabelName"
+            android:layout_alignLeft="@+id/tvLabelName"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etPassword"
+            tools:text="applesauce"
+            android:layout_below="@id/tvLabelPassword"
+            style="@style/textSmallStyle"
+            android:password="true"
+            android:layout_alignStart="@+id/tvLabelName"
+            android:layout_alignLeft="@+id/tvLabelName"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_changes"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/etPassword"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button"
+            style="@style/buttonStyle"
+            android:onClick="saveUserChanges"/>
+    </RelativeLayout>
+
+</RelativeLayout>
